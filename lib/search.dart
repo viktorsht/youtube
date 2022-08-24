@@ -7,7 +7,7 @@ class CustomSearchDelegate extends SearchDelegate<String>{
       IconButton(
         icon: Icon(Icons.clear),
         onPressed: (){
-          query = "";
+          //query = "";
         }
         ),
       IconButton(

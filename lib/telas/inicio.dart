@@ -3,16 +3,16 @@ import 'package:youtube/api_youtube.dart';
 import 'package:youtube/modelos/video.dart';
 
 class Inicio extends StatefulWidget {
-  const Inicio({Key? key}) : super(key: key);
-
+  //const Inicio({Key? key, required String pesquisa}) : super(key: key);
+  String pesquisa="";
+  Inicio(this.pesquisa, {Key? key}) : super(key: key);
   @override
   State<Inicio> createState() => _InicioState();
 }
 
 class _InicioState extends State<Inicio> {
 
-  _listarVideos(){
-    String pesquisa = "";
+  _listarVideos(String pesquisa){
     Api api = Api();
     return api.pesquisar(pesquisa);
   }
@@ -21,7 +21,7 @@ class _InicioState extends State<Inicio> {
 
 
     return FutureBuilder<List<Video>>(
-      future: _listarVideos(),
+      future: _listarVideos(widget.pesquisa),
       builder: (context,snapshot){
         var retorno;
         switch(snapshot.connectionState){

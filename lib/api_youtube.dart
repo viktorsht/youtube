@@ -7,6 +7,7 @@ import 'package:youtube/modelos/video.dart';
 
 const API_KEY = "AIzaSyBpixM12vFNOm6zna0rD6H37Ns8q5vvavw";
 const ID_CANAL_WIND = "UC3KQ5GWANYF8lChqjZpXsQw";
+// ignore: constant_identifier_names
 const URL_BASE = "https://www.googleapis.com/youtube/v3";
 
 
